@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Add Two Num</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			/*width: 100px;*/
+			min-height: 50px;
+			/*border: 2px solid black;*/
+		}
+	</style>
+</head>
+<body>
+	Num1: 
+	<input type="number" id="num1"><br><br>
+	Num2: 
+	<input type="number" id="num2"><br><br>	
+	<button id="sum">Sum</button><br><br>
+	<div class="box"></div>
+</body>
+<script>
+	const num1 = document.getElementById('num1');
+	const num2 = document.getElementById('num2');
+	const sum  = document.getElementById('sum');
+	// const box  = document.getElementById('box');
+	sum.addEventListener('click',()=>{
+		const add = Number(num1.value) + Number(num2.value);
+		const box = document.getElementsByClassName('box')[0];
+		box.innerHTML = "The sum of Num1 and Num2 is : "+add;
+	});
+</script>
+</html>
